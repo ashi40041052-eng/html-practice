@@ -1,12 +1,35 @@
-:root{--pink:#ff5cb8;--deep:#6e3ac8;--bg:#ffeef7}
-*{box-sizing:border-box}body{margin:0;font-family:"Hiragino Kaku Gothic ProN",sans-serif;background:var(--bg);color:#4b3350}
-.hero{position:relative;min-height:72vh;background:radial-gradient(circle at 20% 20%,#fff8,transparent 30%),radial-gradient(circle at 75% 20%,#fff6,transparent 35%),linear-gradient(140deg,#ff8fd1,#b18cff 65%,#ffb2dd);overflow:hidden}
-.overlay{position:absolute;inset:0;background-image:radial-gradient(#fff8 2px,transparent 3px);background-size:24px 24px;opacity:.35}
-.hero-inner{position:relative;z-index:2;max-width:980px;margin:0 auto;padding:80px 20px;color:#fff;text-shadow:0 2px 14px #b03e8f}
-.catch{font-size:clamp(2rem,6vw,4rem);font-weight:700;line-height:1.2}.hero h1{display:inline-block;background:#fff8;color:#ff2f9e;padding:8px 20px;border-radius:999px}
-.badges{display:flex;gap:12px;flex-wrap:wrap}.badges span{background:#fff;color:#ff4aae;padding:10px 16px;border-radius:16px;font-weight:700}
-.cta{display:inline-block;margin-top:20px;padding:16px 34px;border-radius:999px;background:linear-gradient(90deg,#ff4fa8,#9f5df6);color:#fff;text-decoration:none;font-size:1.8rem;font-weight:700;border:3px solid #ffd4ef;box-shadow:0 8px 20px #b74899a0}
-main{max-width:1060px;margin:-30px auto 40px;padding:0 14px}.panel{background:#fff6fb;border:1px solid #ffd8ef;border-radius:20px;padding:28px;margin:16px 0}
-.panel h2,.panel h3{color:#ff3ea7}.split{display:grid;grid-template-columns:2fr 1fr;gap:20px;align-items:center}
-.logo{font-size:4rem;font-weight:900;line-height:1}.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.final-cta{text-align:center;background:linear-gradient(180deg,#ffd7ef,#ffeef8)}
-@media (max-width:768px){.split,.grid{grid-template-columns:1fr}.cta{font-size:1.3rem;width:100%;text-align:center}}
+:root { --bg: #ffe8f4; --frame:#ffd2e8; }
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: radial-gradient(circle at top,#fff4fb,#ffe8f4 45%,#ffdff0);
+  font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+}
+.lp {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
+}
+.panel {
+  background: #fff9fd;
+  border: 1px solid var(--frame);
+  border-radius: 26px;
+  box-shadow: 0 8px 30px rgba(230, 119, 176, .18);
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+.panel img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+@media (max-width: 900px) {
+  .lp { padding: 10px; }
+  .panel { border-radius: 18px; margin-bottom: 12px; }
+  .two-col { grid-template-columns: 1fr; gap: 12px; }
+}
